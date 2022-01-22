@@ -10,5 +10,7 @@ module.exports = {
     sourceType: "module"
   },
   plugins: ["@typescript-eslint", "import"],
-  rules: {}
+  rules: {
+    "new-cap": 0
+  }
 }

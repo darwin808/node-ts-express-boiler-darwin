@@ -4,7 +4,7 @@ const postsRoute = Router()
 postsRoute.get("/posts", async (req: Request, res: Response) => {
   console.log(req, res)
   try {
-    return res.send({ message: " Post" })
+    return res.send({ message: " Post123" })
   } catch (error) {
     return res.send({ error })
   }

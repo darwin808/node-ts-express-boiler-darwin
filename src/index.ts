@@ -2,7 +2,7 @@ import express, { Request, Response } from "express"
 import cors from "cors"
 import cookieParser from "cookie-parser"
 import userRoute from "./Users"
-import postsRoute from "./Posts/indext"
+import postsRoute from "./Posts"
 
 const app = express()
 const port = process.env.PORT || 3000

@@ -1,12 +1,12 @@
-import { Request, Response, Router } from "express";
-const postsRoute = Router();
+import { Request, Response, Router } from "express"
+const postsRoute = Router()
 
 postsRoute.get("/posts", async (req: Request, res: Response) => {
-  console.log(req, res);
+  console.log(req, res)
   try {
-    return res.send({ message: "Post" });
+    return res.send({ message: " kPost" })
   } catch (error) {
-    return res.send({ error });
+    return res.send({ error })
   }
-});
-export default postsRoute;
+})
+export default postsRoute

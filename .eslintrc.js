@@ -9,8 +9,6 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module"
   },
-  plugins: ["@typescript-eslint", "import"],
-  rules: {
-    "new-cap": 0
-  }
+  plugins: ["@typescript-eslint"],
+  rules: { "new-cap": 0 }
 }

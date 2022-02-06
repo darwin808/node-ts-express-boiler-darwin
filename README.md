@@ -1,3 +1,7 @@
+# How to use
+
+### yarn install
+
 ## need for Husky locally
 
 chmod ug+x .husky/_

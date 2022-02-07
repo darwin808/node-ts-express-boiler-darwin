@@ -1,12 +1,16 @@
 # How to use ?
 
-### yarn install
+```
+yarn install
 
-### yarn dev
+yarn dev
+```
 
 # How to commit ?
 
-### yarn commit
+```
+yarn commit
+```
 
 ## need for Husky locally
 

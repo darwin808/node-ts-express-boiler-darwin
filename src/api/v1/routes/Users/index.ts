@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response, Router } from "express"
 const user = Router()
 
+// Middleware
 user.use((req: Request, res: Response, next: NextFunction) => {
   console.log("user route")
 

@@ -1,28 +1,19 @@
-import express, { Request, Response } from "express"
-import cors from "cors"
-import cookieParser from "cookie-parser"
-import userRoute from "./Users"
-import postsRoute from "./Posts"
+import express from "express"
+import { routes } from "./api/v1/routes"
+import { middlewares } from "./api/v1/middlewares"
 
-const app = express()
-const port = process.env.PORT || 3000
+const main = () => {
+  const app = express()
+  const port = process.env.PORT || 3000
 
-app.use(cookieParser())
-app.use(express.json())
-app.use(
-  cors({
-    credentials: true,
-    origin: "*"
-  })
-)
-app.use("/api", userRoute)
-app.use("/api", postsRoute)
+  app.listen(port)
+  middlewares.defaultMiddleware(app)
 
-app.get("/", (req: Request, res: Response) => {
-  console.log(req)
-  res.send("Hello World!")
-})
+  app.get("/", routes.Home)
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+  app.use("/api", routes.user)
+  app.use("/api", routes.posts)
+  app.get("*", routes.NotFound)
+}
+
+main()

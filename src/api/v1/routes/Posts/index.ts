@@ -1,8 +1,9 @@
 import { NextFunction, Request, Response, Router } from "express"
 const posts = Router()
 
+// middlware
 posts.use((req: Request, res: Response, next: NextFunction) => {
-  console.log("posts route")
+  console.log("posts1 route")
 
   if (req.headers.test === "123") {
     return res.sendStatus(404)

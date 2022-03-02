@@ -1,15 +1,16 @@
 import { validateUser } from "./../../validations/index"
 import { NextFunction, Request, Response, Router } from "express"
 import { db } from "../../db/db"
+import createError from "http-errors"
 const router = Router()
 
 const ROUTE: string = "/users"
 // Middleware
-router.use((req: Request, res: Response, next: NextFunction) => {
+router.use((req: Request, _res: Response, next: NextFunction) => {
   console.log(req.headers)
 
   if (req.headers.appkey !== "1") {
-    return res.sendStatus(403)
+    return next(createError(503, "apikey failed"))
   }
   return next()
 })

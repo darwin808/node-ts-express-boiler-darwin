@@ -11,8 +11,7 @@ posts.use((req: Request, res: Response, next: NextFunction) => {
   return next()
 })
 
-posts.get("/posts", async (req: Request, res: Response) => {
-  console.log(req, res)
+posts.get("/posts", async (_: Request, res: Response) => {
   try {
     return res.send({ message: " Post123" })
   } catch (error) {

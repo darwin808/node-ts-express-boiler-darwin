@@ -12,12 +12,13 @@ const main = () => {
   const port = process.env.PORT || 3000
 
   app.listen(port, msg)
-  middlewares.defaultMiddleware(app)
+  middlewares.DefaultMiddleware(app)
 
   app.get("/", routes.Home)
 
-  app.use("/api", routes.user)
-  app.use("/api", routes.posts)
+  app.use("/api", routes.Users)
+  app.use("/api", routes.Posts)
+  app.use("/api", routes.Profile)
   app.get("*", routes.NotFound)
 }
 

@@ -1,6 +1,7 @@
 import { Request, Response } from "express"
-import user from "./Users"
-import posts from "./Posts"
+import constrollers from "../controllers"
+
+const { Users, Posts, Profile } = constrollers
 
 const Home = (req: Request, res: Response) => {
   console.log(req.hostname)
@@ -14,6 +15,7 @@ const NotFound = (req: Request, res: Response) => {
 export const routes = {
   Home,
   NotFound,
-  user,
-  posts
+  Users,
+  Profile,
+  Posts
 }

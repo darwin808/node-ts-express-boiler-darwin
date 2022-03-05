@@ -1,6 +1,6 @@
 import express from "express"
 import { routes } from "./api/v1/routes"
-import { middlewares } from "./api/v1/middlewares"
+import Middlewares from "./api/v1/routes/app/middlewares"
 
 const msg = () => {
   const PORT = process.env.PORT || 3000
@@ -12,12 +12,12 @@ const main = () => {
   const port = process.env.PORT || 3000
 
   app.listen(port, msg)
-  middlewares.defaultMiddleware(app)
+  Middlewares(app)
 
   app.get("/", routes.Home)
 
-  app.use("/api", routes.user)
-  app.use("/api", routes.posts)
+  app.use("/api", routes.User)
+  app.use("/api", routes.Posts)
   app.get("*", routes.NotFound)
 }
 

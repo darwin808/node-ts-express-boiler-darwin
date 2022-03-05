@@ -3,7 +3,7 @@ import express, { Application } from "express"
 import cors from "cors"
 import helmet from "helmet"
 
-const defaultMiddleware = (app: Application) => {
+const Middlewares = (app: Application) => {
   app.use(cookieParser())
   app.use(express.json())
   app.use(
@@ -15,6 +15,4 @@ const defaultMiddleware = (app: Application) => {
   app.use(helmet())
 }
 
-export const middlewares = {
-  defaultMiddleware
-}
+export default Middlewares

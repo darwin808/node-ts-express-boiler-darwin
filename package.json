@@ -27,7 +27,7 @@
     "commitizen-emoji": "^1.0.5",
     "eslint": "^8.10.0",
     "eslint-config-google": "^0.14.0",
-    "eslint-config-prettier": "^8.4.0",
+    "eslint-config-prettier": "^8.5.0",
     "gitmoji-cli": "^4.8.0",
     "husky": "^7.0.0",
     "nodemon": "^2.0.15",
